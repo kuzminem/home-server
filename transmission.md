@@ -6,8 +6,4 @@
 
 В папке с файлом выполнить команду `docker compose create`
 
-Файл [settings.json](transmission/settings.json) скопировать в папку `\\VAULT\public\Transmission\Config`.
-
-Интересует два параметра:
--t --auth или -T --no-auth
---incomplete-dir или --no-incomplete-dir
+### Настройка.
