@@ -11,6 +11,6 @@ services:
       - PGID=100
       - TZ=Europe/Moscow
     volumes:
-      - /srv/dev-disk-by-uuid-1a192a26-3a0a-4bc6-8b4c-c4c01f8a1208/Transmission:/downloads:rw
-      - /srv/dev-disk-by-uuid-1a192a26-3a0a-4bc6-8b4c-c4c01f8a1208/Transmission/Watch:/watch:rw
-      - /srv/dev-disk-by-uuid-1a192a26-3a0a-4bc6-8b4c-c4c01f8a1208/Transmission/Config:/config:rw
+      - /srv/dev-disk-by-uuid-1a192a26-3a0a-4bc6-8b4c-c4c01f8a1208/Transmission:/downloads
+      - /srv/dev-disk-by-uuid-1a192a26-3a0a-4bc6-8b4c-c4c01f8a1208/Transmission/watch:/watch
+      - /srv/dev-disk-by-uuid-1a192a26-3a0a-4bc6-8b4c-c4c01f8a1208/Transmission/settings:/config
