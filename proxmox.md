@@ -22,6 +22,18 @@ deb http://mirror.yandex.ru/debian bullseye-updates main
 deb http://mirror.yandex.ru/debian-security bullseye-security main
 ```
 
+### Пробросить диск в виртуальную машину.
+
+ls -l /dev/disk/by-id/
+
+qm set 100 -scsi1 /dev/disk/by-id/ata-ST4000DX001-1CE168_Z300ZGBC
+
+qm set 100 -scsi2 /dev/disk/by-id/usb-ST320005_42AS_98765432100C-0:0
+
+### Разное.
+
+Выключить виртуальную машину из консоли: `qm stop 100`
+
 ### Подключить жёсткий диск.
 
 Посмотреть диски `lsblk` и UUID `blkid`
@@ -54,7 +66,3 @@ chmod -R a+rwX /mnt/public
 Посмотреть права ACL: `getfacl /mnt/public`
 
 Удалить права ACL: `setfacl -b /mnt/public/APP`
-
-### Разное.
-
-Выключить виртуальную машину из консоли: `qm stop 101`
