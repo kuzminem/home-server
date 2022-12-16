@@ -9,10 +9,6 @@
 
 Логин root, пароль &mdash; указанный при установке.
 
-### Папки.
-
-* `/var/lib/vz/template/iso/` &mdash; образы гостевых систем.
-
 ### Подключить репозиторий Яндекс.
 
 Отредактировать список репозиториев: `nano /etc/apt/sources.list`
@@ -22,13 +18,17 @@ deb http://mirror.yandex.ru/debian bullseye-updates main
 deb http://mirror.yandex.ru/debian-security bullseye-security main
 ```
 
+### Папки.
+
+* `/var/lib/vz/template/iso/` &mdash; образы гостевых систем.
+
 ### Пробросить диск в виртуальную машину.
 
-ls -l /dev/disk/by-id/
+`ls -l /dev/disk/by-id/`
 
-qm set 100 -scsi1 /dev/disk/by-id/ata-ST4000DX001-1CE168_Z300ZGBC
+`qm set 100 -scsi1 /dev/disk/by-id/ata-ST4000DX001-1CE168_Z300ZGBC`
 
-qm set 100 -scsi2 /dev/disk/by-id/usb-ST320005_42AS_98765432100C-0:0
+`qm set 200 -scsi1 /dev/disk/by-id/usb-ST320005_42AS_98765432100C-0:0`
 
 ### Разное.
 
